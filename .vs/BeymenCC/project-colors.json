@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cad7fd37-4e50-4893-a3b9-b803f70f9a42": {
+      "ProjectGuid": "cad7fd37-4e50-4893-a3b9-b803f70f9a42",
+      "DisplayName": "ConfigurationReader",
+      "ColorIndex": 0
+    },
+    "dd46104f-00e9-4b22-8dca-bd8dcbef1973": {
+      "ProjectGuid": "dd46104f-00e9-4b22-8dca-bd8dcbef1973",
+      "DisplayName": "Repository",
+      "ColorIndex": 1
+    },
+    "04f0b589-9695-4dc0-9e76-eedcf9ec09cd": {
+      "ProjectGuid": "04f0b589-9695-4dc0-9e76-eedcf9ec09cd",
+      "DisplayName": "Entity",
+      "ColorIndex": 2
+    },
+    "bfc841f8-3aa7-43aa-a178-973a8c0fab83": {
+      "ProjectGuid": "bfc841f8-3aa7-43aa-a178-973a8c0fab83",
+      "DisplayName": "xx",
+      "ColorIndex": 3
+    },
+    "78f68b73-3c40-4bda-864e-e95b24aa30ac": {
+      "ProjectGuid": "78f68b73-3c40-4bda-864e-e95b24aa30ac",
+      "DisplayName": "TestClient",
+      "ColorIndex": 4
+    },
+    "d3641c12-dead-4ca7-b2de-970f0b3ecfae": {
+      "ProjectGuid": "d3641c12-dead-4ca7-b2de-970f0b3ecfae",
+      "DisplayName": "WebApplication",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 6
+}

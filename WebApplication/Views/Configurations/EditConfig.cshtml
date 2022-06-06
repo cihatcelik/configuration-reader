@@ -1,0 +1,110 @@
+﻿@model ConfigurationViewModel
+@{
+    ViewData["Title"] = "Anasayfa";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Konfigürasyon Kaydı Düzenleme</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="~/Home/Index">Anasayfa</a></li>
+                    <li class="breadcrumb-item active">Konfigürasyon Kaydı Düzenle</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Konfigürasyon Düzenleme</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            @if (ViewBag.Message != null)
+                            {
+                                <div class="p-1 mb-2 text-danger text-center">@ViewBag.Message</div>
+                            }
+                        </div>
+                    </div>
+                    @if(Model!= null)
+                    {
+                        <form method="post">
+                        <div class="card-body">
+                            <input type="text" value="@Model.Id" asp-for="Id" style="display:none" />
+                            <div class="row">
+                                <div class="col-12 text-center mt-1 mb-1">
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Konfigürasyon Adı</label>
+                                <input type="text" class="form-control" asp-for="Name" id="exampleInputEmail1" value="@Model.Name">
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center mt-1 mb-1">
+                                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Türü</label>
+                                <input type="text" class="form-control" asp-for="Type" id="exampleInputEmail1" value="@Model.Type">
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center mt-1 mb-1">
+                                    @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Değeri</label>
+                                <input type="text" class="form-control" asp-for="Value" id="exampleInputEmail1" value="@Model.Value">
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center mt-1 mb-1">
+                                    @Html.ValidationMessageFor(model => model.ApplicationName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Uygulama Adı</label>
+                                <input type="text" class="form-control" asp-for="ApplicationName" id="exampleInputPassword1" placeholder="Uygulama Adı">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" asp-for="IsActive" id="IsActive">
+                                <label class="form-check-label" for="exampleCheck1">Konfigürasyon Aktif Olsun</label>
+                            </div>
+
+
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </div>
+                    </form>  
+                    }
+                  
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    <!-- /.container-fluid -->
+</section>

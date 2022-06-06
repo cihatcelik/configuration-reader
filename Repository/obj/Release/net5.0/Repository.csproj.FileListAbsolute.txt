@@ -1,0 +1,12 @@
+C:\Users\cihat\source\repos\BeymenCC\Repository\bin\Release\net5.0\Repository.deps.json
+C:\Users\cihat\source\repos\BeymenCC\Repository\bin\Release\net5.0\Repository.dll
+C:\Users\cihat\source\repos\BeymenCC\Repository\bin\Release\net5.0\ref\Repository.dll
+C:\Users\cihat\source\repos\BeymenCC\Repository\bin\Release\net5.0\Repository.pdb
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.csproj.AssemblyReference.cache
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.AssemblyInfoInputs.cache
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.AssemblyInfo.cs
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.dll
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\ref\Repository.dll
+C:\Users\cihat\source\repos\BeymenCC\Repository\obj\Release\net5.0\Repository.pdb

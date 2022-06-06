@@ -1,0 +1,12 @@
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\bin\Debug\net5.0\RedisCache.dll.config
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\bin\Debug\net5.0\RedisCache.deps.json
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\bin\Debug\net5.0\RedisCache.dll
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\bin\Debug\net5.0\ref\RedisCache.dll
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\bin\Debug\net5.0\RedisCache.pdb
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.AssemblyInfoInputs.cache
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.AssemblyInfo.cs
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.csproj.CoreCompileInputs.cache
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.dll
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\ref\RedisCache.dll
+C:\Users\cihat\source\repos\BeymenCC\RedisCache\obj\Debug\net5.0\RedisCache.pdb

@@ -1,0 +1,160 @@
+﻿@model IEnumerable<ConfigurationViewModel>
+
+@{
+    ViewData["Title"] = "Konfigürasyon Kayıtları";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+<!-- DataTables -->
+<link rel="stylesheet" href="~/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="~/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="~/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<link rel="stylesheet" href="~/css/font-awesome-animation.min.css">
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Konfigürasyon Kayıtları</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="~/Home/Index">Anasayfa</a></li>
+                    <li class="breadcrumb-item active">Konfigürasyon Kayıtları</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-10">
+                                <h3 class="card-title">Konfigürasyon Kayıtları (@Model.ToList().Count())</h3>
+                            </div>
+
+                            <div class="col-2">
+
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="Ara" value="@ViewBag.Search" id="searchTerm">
+                                    <div class="input-group-append">
+                                        <button type="button" class="form-control" onclick="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                @if (TempData["Message"] != null)
+                                {
+                                    <div class="p-1 mb-2 text-danger text-center">@TempData["Message"]</div>
+                                }
+                            </div>
+                        </div>
+                        <table id="example2" class="table table-bordered table-hover text-center">
+                            <thead>
+                                <tr>
+                                    <th>Konf. Adı</th>
+                                    <th>Tipi</th>
+                                    <th>Değeri</th>
+                                    <th>Aktif/Pasif</th>
+                                    <th>Uygulama İsmi</th>
+                                    <th>Düzenle</th>
+                                    <th>Sil</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td>@item.Type</td>
+                                        <td>@item.Value</td>
+                                        @if (item.IsActive == true)
+                                        {
+                                            <td>Aktif</td>
+                                        }
+                                        else
+                                        {
+                                            <td>Pasif</td>
+                                        }
+                                        <td>@item.ApplicationName</td>
+                                        <td>
+                                            <a class="btn" href="~/Configurations/EditConfig?id=@item.Id">
+                                                <span style="font-size: 1.5em; color: #0f4c75;">
+                                                    <i class="fas fa-edit faa-flash animated-hover"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn" href="~/Configurations/DeleteConfig?id=@item.Id">
+                                                <span style="font-size: 1.5em; color: #dc3545;">
+                                                    <i class="fas fa-trash faa-flash animated-hover"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    <!-- /.container-fluid -->
+</section>
+@section scripts{
+<script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+<script>
+       $(function () {
+
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+
+        function search() {
+
+        var url = '/Configurations/Index';
+
+        if ($('#searchTerm').val() != "") {
+            window.location.href = url +'?search=' + $('#searchTerm').val();
+        } else {
+             window.location.href = url;
+        }
+
+    }
+</script>
+
+}
+
+
